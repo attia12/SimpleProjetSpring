@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/auth/signup") //yemchiw ma8ir vazlidating token jwt
+                .antMatchers("/api/auth/**") //yemchiw ma8ir vazlidating token jwt
                 .permitAll()
                 .anyRequest()
                 .authenticated();
